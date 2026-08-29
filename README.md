@@ -1,6 +1,6 @@
 # Diabetes Risk Prediction — Multi-Class Classification
 
-Predicting diabetes risk level (Low / Moderate / High) from demographic, lifestyle, and clinical health data using both a tuned Neural Network and XGBoost.
+Predicting diabetes risk level (Low / Moderate / High) from demographic, lifestyle, and clinical health data using both Neural Network and XGBoost.
 
 ## Overview
 This project builds and compares two multi-class classification models to predict a patient's diabetes risk category based on 18 features spanning demographics (age, gender, city), lifestyle (diet, smoking, alcohol, physical activity, sleep, stress), and clinical measurements (BMI, fasting blood sugar, HbA1c, blood pressure, waist circumference).
@@ -15,13 +15,13 @@ This project builds and compares two multi-class classification models to predic
 2. **Missing Value Handling** — verified missingness was not correlated with the target (MCAR/MAR) before imputing with an explicit "Unknown" category, preserving information rather than fabricating values
 3. **Preprocessing** — one-hot encoding, stratified train/CV/test split (70/15/15), feature scaling, class weighting for imbalance
 4. **Modeling**
-   - Neural Network (TensorFlow/Keras) — tuned via Keras Tuner (layers, units, dropout, learning rate)
-   - XGBoost — gradient-boosted trees as a tabular-data baseline
+   - Neural Network (TensorFlow/Keras) 
+   - XGBoost
 5. **Evaluation** — accuracy, per-class precision/recall/F1, macro-F1, confusion matrices
 
 ## Results
 
-| Metric | Neural Network (tuned) | XGBoost (baseline) |
+| Metric | Neural Network (baseline) | XGBoost (baseline) |
 |---|---|---|
 | Test Accuracy | 77.5% | 76.0% |
 | Low F1 | 0.86 | 0.85 |
@@ -34,7 +34,7 @@ This project builds and compares two multi-class classification models to predic
 ## Tech Stack
 - Python, Pandas, NumPy
 - Scikit-learn (preprocessing, splitting, metrics)
-- TensorFlow / Keras, Keras Tuner
+- TensorFlow / Keras
 - XGBoost
 - Matplotlib, Seaborn
 
